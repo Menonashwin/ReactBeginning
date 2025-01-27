@@ -3,12 +3,14 @@ import MainHeader from "./Pages/Header/MainHeader";
 import SubHeader from "./Pages/Header/SubHeader";
 import "./App.css";
 const App = () => {
+  
   return (
     <div
       style={{
         height: "100vh",
         width: "100%",
-        backgroundColor: "black",
+        backgroundImage: `url("https://e0.pxfuel.com/wallpapers/656/54/desktop-wallpaper-dark-theme-dark-mode.jpg")`,
+        backgroundSize: "cover",
       }}
     >
       <div
