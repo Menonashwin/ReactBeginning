@@ -1,10 +1,10 @@
-const SubHeader=()=>{
+const SubHeader=({SubHeader})=>{
     return(
         <div
         style={{
           width:"15%",
           marginTop:"70px",
-          
+          userSelect:"none",
         }}
       >
         <p
@@ -18,7 +18,7 @@ const SubHeader=()=>{
             color:"white"
           }}
         >
-      Trusted by 35000+ People
+      {SubHeader}
         </p>
         </div>
     )

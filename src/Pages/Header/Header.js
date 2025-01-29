@@ -1,7 +1,7 @@
 import SpaIcon from "@mui/icons-material/Spa";
 import { useState } from "react";
 
-const Header = () => {
+const Header = ({HeaderName,Navtab1,Navtab2,Navtab3,Navtab4,Button1,Button2}) => {
   const [selected, setSelected] = useState("Resources");
   const handleClick = (tabName) => {
     setSelected(tabName);
@@ -45,7 +45,7 @@ const Header = () => {
               fontWeight: "bold",
             }}
           >
-            Contentium
+            {HeaderName}
           </p>
         </div>
         <div
@@ -64,6 +64,7 @@ const Header = () => {
               color: "white",
               fontWeight: "bold",
               cursor: "pointer",
+              userSelect:"none"
             }}
           >
             <p
@@ -72,7 +73,7 @@ const Header = () => {
               }}
               onClick={() => handleClick("Resources")}
             >
-              Resources
+              {Navtab1}
             </p>
             <p
               style={{
@@ -80,7 +81,7 @@ const Header = () => {
               }}
               onClick={() => handleClick("Blog")}
             >
-              Blog
+              {Navtab2}
             </p>
             <p
               style={{
@@ -88,7 +89,7 @@ const Header = () => {
               }}
               onClick={() => handleClick("Pricing")}
             >
-              Pricing
+              {Navtab3}
             </p>
             <p
               style={{
@@ -96,20 +97,20 @@ const Header = () => {
               }}
               onClick={() => handleClick("Docs")}
             >
-              Docs
+              {Navtab4}
             </p>
           </div>
           <div
             style={{
               display: "flex",
-              gap: "1px",
+              gap: "10px",
               alignItems: "center",
+              userSelect:"none"
             }}
           >
             <p
               style={{
-                color: selected === "Book a call" ? "red" : "white",
-                backgroundColor: "gray",
+                backgroundColor: selected === "Book a call" ? "red" : "white",
                 border: "1px solid black",
                 padding: "10px 20px",
                 borderRadius: "15px",
@@ -117,12 +118,11 @@ const Header = () => {
               }}
               onClick={() => handleClick("Book a call")}
             >
-              Book a call
+              {Button1}
             </p>
             <p
               style={{
-                color: selected === "Discover the platform" ? "red" : "black",
-                backgroundColor: "white",
+                backgroundColor: selected === "Discover the platform" ? "red" : "white",
                 border: "1px solid black",
                 padding: "10px 20px",
                 borderRadius: "15px",
@@ -130,7 +130,7 @@ const Header = () => {
               }}
               onClick={() => handleClick("Discover the platform")}
             >
-              Discover the platform
+              {Button2}
             </p>
           </div>
         </div>

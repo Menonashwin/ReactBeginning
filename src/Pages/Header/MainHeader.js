@@ -1,4 +1,4 @@
-const MainHeader = () => {
+const MainHeader = ({MainHeader1,MainHeader2}) => {
   return (
     <div
       style={{
@@ -6,6 +6,7 @@ const MainHeader = () => {
         width: "40%",
         paddingTop: "25px",
         paddingBottom: "25px",
+        userSelect: "none",
       }}
     >
       <p
@@ -13,9 +14,11 @@ const MainHeader = () => {
           fontSize: "60px",
           fontWeight: "bold",
           textAlign: "center",
+          fontFamily:"arial",
+          
         }}
       >
-        Managing Your Content With AI
+        {MainHeader1}
       </p>
       <div
         style={{
@@ -30,8 +33,7 @@ const MainHeader = () => {
             textAlign: "center",
           }}
         >
-          An open source content management system that uses AI to automate
-          various aspects of content creation, optimization, and distribution.
+         {MainHeader2}
         </p>
       </div>
     </div>
